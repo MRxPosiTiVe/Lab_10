@@ -2,7 +2,7 @@ import java.io.*;
 
 import java.util.Scanner;
 
-public class exc10_5_2 {
+public class exc10_5 {
 
     private static boolean isAbbreviation(String word) {
         return word.matches("^[A-ZА-Я0-9]+$");
