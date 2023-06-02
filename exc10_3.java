@@ -2,11 +2,11 @@ import java.io.*;
 import java.util.Scanner;
 
 
-public class exc10_4 {
+public class exc10_3 {
 
     public static void Write(String str) {
 
-        try (FileWriter writer = new FileWriter("src/exc_10_4.txt")) {
+        try (FileWriter writer = new FileWriter("src/exc_10_3.txt")) {
 
             File file = new File("src/exc_10_4.txt");
             if (!file.exists()) file.createNewFile();
@@ -54,7 +54,7 @@ public class exc10_4 {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите текст: ");
         String text = input.nextLine();
-        String filename = "src/exc_10_4.txt";
+        String filename = "src/exc_10_3.txt";
         Write(text);
         printWordsWithUpperCase(filename);
 
