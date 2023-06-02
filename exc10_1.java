@@ -3,15 +3,15 @@ import java.io.*;
 
 public class exc10_1 {
 
-    public static void Write(char a, boolean hui) {
+    public static void Write(char a, boolean bool) {
 
-        try (FileWriter writer = new FileWriter("src/exc_10_1.txt", hui)){
+        try (FileWriter writer = new FileWriter("src/exc_10_1.txt", bool)){
             writer.append(a);
             writer.flush();
         } catch (IOException e) {
             System.out.println("Error " + e);
         }
-//        try (FileWriter writer = new FileWriter("src/exc_10_1.txt", hui)) {
+//        try (FileWriter writer = new FileWriter("src/exc_10_1.txt", bool)) {
 //            writer.append(a);
 //            writer.flush();
 //        } catch (IOException ex) {
@@ -128,14 +128,13 @@ public class exc10_1 {
 
         boolean foundSequence = false;
         for (int i = 0; i < arr.length - 3; i++) {
-            // проверка условий для последовательности
             if (Character.isDigit(arr[i].charAt(0)) &&
                     Character.isDigit(arr[i + 1].charAt(0)) &&
                     Character.isDigit(arr[i + 2].charAt(0))) {
                 int num1 = Integer.parseInt(arr[i]);
                 int num2 = Integer.parseInt(arr[i + 1]);
                 int num3 = Integer.parseInt(arr[i + 2]);
-                if (num1 > num2 && num2 > num3) { // первые две цифры убывающие, последняя возрастающая
+                if (num1 > num2 && num2 > num3) {
                     foundSequence = true;
                     break;
                 }
